@@ -1,0 +1,33 @@
+﻿html, body {
+    height: 100%;
+    background-color: #ccc;
+    color: #333;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 0;
+    border: 1px solid #333;
+    background-color: white;
+}
+
+header {
+    padding: 10px;
+    height: 120px;
+}
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+footer {
+    padding: 10px;
+    height: 100px;
+}
+
+    footer img {
+        width: 50px;
+        height: 50px;
+    }

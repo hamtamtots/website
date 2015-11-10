@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ article.title }} - {{ block.super }}{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/content/article.css' %}" />
+{% endblock %}
+
+{% block content %}
+    <h1 class="article-title">{{ article.title }}</h1>
+    <p class="article-meta">{{ article.last_modified|date:'j F, Y' }}</p>
+    {{ article.body|safe }}
+{% endblock %}

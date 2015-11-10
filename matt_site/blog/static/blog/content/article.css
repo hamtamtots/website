@@ -1,0 +1,24 @@
+﻿.article-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+
+.article-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+code {
+    color: #333;
+    background-color: #FCEDCF;
+}
+
+pre {
+    background-color: #FCEDCF;
+    border: none;
+     
+}
+
+.well blockquote {
+    border-left: 5px solid #FCEDCF;
+}

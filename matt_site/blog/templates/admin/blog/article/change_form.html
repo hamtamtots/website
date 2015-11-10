@@ -1,0 +1,26 @@
+﻿{% extends "admin/change_form.html" %}
+{% load staticfiles %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "content/bootstrap.min.css" %}" />
+{% endblock %}
+
+{% block admin_change_form_document_ready %}
+<script src="{% static 'scripts/jquery.min.js' %}"></script>
+<script src="{% static 'scripts/bootstrap.min.js' %}"></script>
+<script src="{% static 'scripts/showdown.min.js' %}"></script>
+<script src="{% static 'scripts/showdown_utils.js' %}"></script>
+{{ block.super }}
+<script>
+
+    (function ($) {
+        $(function () {
+            var bodyEditor = $('#id_body');
+            bodyEditor.after('<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#body-preview-modal">Preview</button><div id="body-preview-modal" class="modal fade" role="dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">Preview</h4></div><div id="body-preview" class="modal-body"></div></div>');
+            bodyEditor.downeditor({ target: '#body-preview' });
+        });
+    })(jQuery);
+    
+</script>
+{% endblock %}

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>matt_site</Name>
+    <RootNamespace>matt_site</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b1dca050-5f2c-4139-a81a-bf45e55594fd</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="blog\admin.py" />
+    <Compile Include="blog\models\article.py" />
+    <Compile Include="blog\models\__init__.py" />
+    <Compile Include="blog\tests\__init__.py" />
+    <Compile Include="blog\urls.py" />
+    <Compile Include="blog\views\articleview.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="blog\views\__init__.py" />
+    <Compile Include="home\views\homeview.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="blog\tests\tests.py" />
+    <Compile Include="blog\__init__.py" />
+    <Compile Include="home\models\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="home\tests\tests.py" />
+    <Compile Include="home\tests\__init__.py" />
+    <Compile Include="home\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="home\views\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="home\__init__.py" />
+    <Compile Include="link\admin.py" />
+    <Compile Include="link\models\link.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="link\models\__init__.py" />
+    <Compile Include="link\tests\tests.py" />
+    <Compile Include="link\tests\__init__.py" />
+    <Compile Include="link\urls.py" />
+    <Compile Include="link\views\linkview.py" />
+    <Compile Include="link\views\__init__.py" />
+    <Compile Include="link\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="matt_site\private_settings.py.template" />
+    <Compile Include="matt_site\private_settings.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="matt_site\__init__.py" />
+    <Compile Include="matt_site\settings.py" />
+    <Compile Include="matt_site\urls.py" />
+    <Compile Include="matt_site\wsgi.py" />
+    <Compile Include="restore.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="blog\models\" />
+    <Folder Include="blog\static\" />
+    <Folder Include="blog\static\blog\content\" />
+    <Folder Include="blog\static\blog\" />
+    <Folder Include="blog\templates\admin\" />
+    <Folder Include="blog\templates\admin\blog\" />
+    <Folder Include="blog\templates\admin\blog\article\" />
+    <Folder Include="blog\tests\" />
+    <Folder Include="blog\templates\blog\" />
+    <Folder Include="blog\views\" />
+    <Folder Include="link\" />
+    <Folder Include="link\models\" />
+    <Folder Include="link\static\" />
+    <Folder Include="link\templates\" />
+    <Folder Include="link\templates\home\" />
+    <Folder Include="link\tests\" />
+    <Folder Include="link\views\" />
+    <Folder Include="static\" />
+    <Folder Include="static\content\" />
+    <Folder Include="static\scripts\" />
+    <Folder Include="static_contrib\content\" />
+    <Folder Include="static_contrib\fonts\" />
+    <Folder Include="static\content\images\" />
+    <Folder Include="static\content\images\icons\" />
+    <Folder Include="static_contrib\scripts\" />
+    <Folder Include="blog\" />
+    <Folder Include="blog\templates\" />
+    <Folder Include="home\" />
+    <Folder Include="home\models\" />
+    <Folder Include="home\static\" />
+    <Folder Include="home\templates\home\" />
+    <Folder Include="home\tests\" />
+    <Folder Include="home\templates\" />
+    <Folder Include="home\views\" />
+    <Folder Include="matt_site\" />
+    <Folder Include="templates\" />
+    <Folder Include="static_contrib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="blog\static\blog\content\article.css" />
+    <Content Include="blog\templates\admin\blog\article\change_form.html" />
+    <Content Include="bower.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="gulpfile.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="link\templates\home\index.html" />
+    <Content Include="package.json" />
+    <Content Include="static\content\images\dwongoose256.png" />
+    <Content Include="static\content\images\icons\favicon.ico" />
+    <Content Include="static\scripts\layout.js" />
+    <Content Include="blog\templates\blog\index.html" />
+    <Content Include="home\templates\home\index.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="static\content\site.css" />
+    <Content Include="static\scripts\showdown_utils.js" />
+    <Content Include="templates\layout.html" />
+    <Content Include="templates\version.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
