@@ -8,11 +8,13 @@ var config = {
     fontDir: './static_contrib/fonts'
 };
 
+gulp.task('default', ['copy']);
+
 gulp.task('bower', function () {
     return bower().pipe(gulp.dest(config.bowerDir));
 });
 
-gulp.task('copy', function () {
+gulp.task('copy', ['bower'], function () {
 
     gulp.src([
         config.bowerDir + '/jquery/dist/*',
@@ -31,4 +33,3 @@ gulp.task('copy', function () {
     ]).pipe(gulp.dest(config.fontDir));
 });
 
-gulp.task('default', ['bower', 'copy']);

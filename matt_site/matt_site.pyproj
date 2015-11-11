@@ -96,11 +96,8 @@
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\scripts\" />
-    <Folder Include="static_contrib\content\" />
-    <Folder Include="static_contrib\fonts\" />
     <Folder Include="static\content\images\" />
     <Folder Include="static\content\images\icons\" />
-    <Folder Include="static_contrib\scripts\" />
     <Folder Include="blog\" />
     <Folder Include="blog\templates\" />
     <Folder Include="home\" />
@@ -112,7 +109,6 @@
     <Folder Include="home\views\" />
     <Folder Include="matt_site\" />
     <Folder Include="templates\" />
-    <Folder Include="static_contrib\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="blog\static\blog\content\article.css" />
