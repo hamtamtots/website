@@ -111,6 +111,7 @@
     <Folder Include="home\views\" />
     <Folder Include="matt_site\" />
     <Folder Include="templates\" />
+    <Folder Include="templates\admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="blog\static\blog\content\article.css" />
@@ -131,6 +132,7 @@
     <Content Include="requirements.txt" />
     <Content Include="static\content\site.css" />
     <Content Include="static\scripts\showdown_utils.js" />
+    <Content Include="templates\admin\index.html" />
     <Content Include="templates\layout.html" />
     <Content Include="templates\version.html" />
   </ItemGroup>
