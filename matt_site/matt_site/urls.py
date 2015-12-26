@@ -2,8 +2,7 @@
 Definition of urls for matt_site.
 """
 
-from django.conf.urls import patterns, url
-from django.conf.urls import include
+from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 admin.autodiscover()
