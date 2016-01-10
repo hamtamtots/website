@@ -4,7 +4,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>matt_site</Name>
     <RootNamespace>matt_site</RootNamespace>
-    <InterpreterId>{05ea8029-d6f2-4092-90ee-845ae95bc088}</InterpreterId>
+    <InterpreterId>{185ede8a-f3c0-403e-813b-8db9a4f2d176}</InterpreterId>
     <InterpreterVersion>3.5</InterpreterVersion>
   </PropertyGroup>
   <PropertyGroup>
@@ -31,6 +31,9 @@
   <ItemGroup>
     <Compile Include="blog\admin.py" />
     <Compile Include="blog\models\article.py" />
+    <Compile Include="blog\models\tag.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="blog\models\__init__.py" />
     <Compile Include="blog\tests\__init__.py" />
     <Compile Include="blog\urls.py" />
@@ -92,7 +95,6 @@
     <Folder Include="link\models\" />
     <Folder Include="link\static\" />
     <Folder Include="link\templates\" />
-    <Folder Include="link\templates\home\" />
     <Folder Include="link\tests\" />
     <Folder Include="link\views\" />
     <Folder Include="static\" />
@@ -122,7 +124,6 @@
     <Content Include="gulpfile.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="link\templates\home\index.html" />
     <Content Include="package.json" />
     <Content Include="static\content\images\dwongoose256.png" />
     <Content Include="static\content\images\icons\favicon.ico" />
@@ -137,8 +138,8 @@
     <Content Include="templates\version.html" />
   </ItemGroup>
   <ItemGroup>
-    <Interpreter Include="..\..\..\venvs\website_env\">
-      <Id>{05ea8029-d6f2-4092-90ee-845ae95bc088}</Id>
+    <Interpreter Include="..\..\..\virtual_envs\website_env\">
+      <Id>{185ede8a-f3c0-403e-813b-8db9a4f2d176}</Id>
       <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
       <Version>3.5</Version>
       <Description>website_env (Python 3.5)</Description>
