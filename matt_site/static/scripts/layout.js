@@ -1,6 +1,7 @@
 ﻿$(document).ready(function () {
     stretchContent();
     $(window).resize(stretchContent);
+    $('#dwongoose_bottom').click(scrollToTop);
 });
 
 function stretchContent() {
@@ -12,4 +13,8 @@ function stretchContent() {
         $('#content').css('height', height);
     }
     $('#content').css('min-height', height);
+}
+
+function scrollToTop() {
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
 }
