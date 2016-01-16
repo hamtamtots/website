@@ -7,8 +7,21 @@
     <link rel="stylesheet" type="text/css" href="{% static 'blog/content/article.css' %}" />
 {% endblock %}
 
+{% block precontent %}
+{% endblock %}
+
 {% block content %}
+    <div id="sharebar">
+        <a href="https://twitter.com/share?text={{ article.title }}&url={{ request.build_absolute_uri|urlencode }}"><i class="fa fa-twitter-square fa-2x"></i></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}"><i class="fa fa-facebook-square fa-2x"></i></a>
+        <a href="https://plus.google.com/share?url={{ request.build_absolute_uri|urlencode }}"><i class="fa fa-google-plus-square fa-2x"></i></a>
+        <a href="https://reddit.com/submit?title={{ article.title }}&url={{ request.build_absolute_uri|urlencode }}"><i class="fa fa-reddit-square fa-2x"></i></a>
+    </div>
     <h1 class="article-title">{{ article.title }}</h1>
     <p class="article-meta">{{ article.last_modified|date:'j F, Y' }}</p>
     {{ article.body|safe }}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'blog/scripts/article.js' %}"></script>
 {% endblock %}

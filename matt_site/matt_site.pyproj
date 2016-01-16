@@ -85,6 +85,7 @@
     <Folder Include="blog\static\" />
     <Folder Include="blog\static\blog\content\" />
     <Folder Include="blog\static\blog\" />
+    <Folder Include="blog\static\blog\scripts\" />
     <Folder Include="blog\templates\admin\" />
     <Folder Include="blog\templates\admin\blog\" />
     <Folder Include="blog\templates\admin\blog\article\" />
@@ -116,6 +117,7 @@
     <Folder Include="templates\admin\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="blog\static\blog\scripts\article.js" />
     <Content Include="blog\static\blog\content\article.css" />
     <Content Include="blog\templates\admin\blog\article\change_form.html" />
     <Content Include="bower.json">
