@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ view.get_title|default:"Blog" }} - {{ block.super }}{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block precontent %}
+{% endblock %}
+
+{% block content %}
+    <h1>Articles</h1>
+    <ul>
+    {% for article in object_list %}
+        <li>{{ article.last_modified|date:'j F, Y' }} - {{ article.title }}</li>
+    {% empty %}
+        <li>No articles yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

@@ -47,3 +47,16 @@ footer {
         width: 50px;
         height: 50px;
     }
+
+.label-default {
+    background-color: #FCEDCF;
+    color: #999;
+}
+
+a:hover .label-default {
+    color: #333;
+}
+
+a:hover {
+    text-decoration: none;
+}

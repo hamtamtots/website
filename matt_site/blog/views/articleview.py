@@ -6,7 +6,7 @@ from blog.models.article import Article
 class ArticleView(DetailView):
     
     model = Article
-    template_name = 'blog/index.html'
+    template_name = 'blog/article.html'
 
     def get_object(self):
         article = super().get_object()

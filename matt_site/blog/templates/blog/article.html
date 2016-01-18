@@ -19,6 +19,9 @@
     </div>
     <h1 class="article-title">{{ article.title }}</h1>
     <p class="article-meta">{{ article.last_modified|date:'j F, Y' }}</p>
+    {% for tag in article.tags.all %}
+        <a href="{% url 'blog_tagged_list' tag=tag.tag %}"><span class="label label-default">{{ tag.tag }}</span></a>
+    {% endfor %}
     {{ article.body|safe }}
     <hr />
     <div id="disqus_thread"></div>
@@ -43,7 +46,7 @@
         (d.head || d.body).appendChild(s);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view comments</noscript>
 {% endblock %}
 
 {% block scripts %}
