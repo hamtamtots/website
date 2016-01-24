@@ -30,6 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="blog\admin.py" />
+    <Compile Include="blog\models\articlebody.py" />
     <Compile Include="blog\models\article.py" />
     <Compile Include="blog\models\tag.py">
       <SubType>Code</SubType>
@@ -37,6 +38,7 @@
     <Compile Include="blog\models\__init__.py" />
     <Compile Include="blog\tests\__init__.py" />
     <Compile Include="blog\urls.py" />
+    <Compile Include="blog\views\taglistview.py" />
     <Compile Include="blog\views\taggedarticlelistview.py" />
     <Compile Include="blog\views\articlelistview.py" />
     <Compile Include="blog\views\articleview.py">
@@ -90,7 +92,7 @@
     <Folder Include="blog\static\blog\scripts\" />
     <Folder Include="blog\templates\admin\" />
     <Folder Include="blog\templates\admin\blog\" />
-    <Folder Include="blog\templates\admin\blog\article\" />
+    <Folder Include="blog\templates\admin\blog\articlebody\" />
     <Folder Include="blog\tests\" />
     <Folder Include="blog\templates\blog\" />
     <Folder Include="blog\views\" />
@@ -121,8 +123,9 @@
   <ItemGroup>
     <Content Include="blog\static\blog\scripts\article.js" />
     <Content Include="blog\static\blog\content\article.css" />
-    <Content Include="blog\templates\admin\blog\article\change_form.html" />
+    <Content Include="blog\templates\admin\blog\articlebody\change_form.html" />
     <Content Include="blog\templates\blog\article.html" />
+    <Content Include="blog\templates\blog\taglist.html" />
     <Content Include="bower.json">
       <SubType>Code</SubType>
     </Content>
@@ -133,7 +136,7 @@
     <Content Include="static\content\images\dwongoose256.png" />
     <Content Include="static\content\images\icons\favicon.ico" />
     <Content Include="static\scripts\layout.js" />
-    <Content Include="blog\templates\blog\list.html" />
+    <Content Include="blog\templates\blog\articlelist.html" />
     <Content Include="home\templates\home\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="static\content\site.css" />

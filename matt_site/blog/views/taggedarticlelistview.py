@@ -4,7 +4,7 @@ from blog.models.article import Article
 
 class TaggedArticleListView(ListView):
     
-    template_name = 'blog/list.html'
+    template_name = 'blog/articlelist.html'
 
     def get_queryset(self):
         return Article.objects.filter(tags__tag=self.kwargs['tag'])

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ view.get_title|default:"Blog" }} - {{ block.super }}{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block precontent %}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ view.get_title|default:"All" }}</h1>
+    {% for article in object_list %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{ article.title }}</h3>
+            <h6 class="pull-right">{{ article.last_modified|date:'j F, Y' }}</h6>
+        </div>
+        <div class="panel-body">
+        article description
+        </div>
+    </div>
+    {% empty %}
+        <p>No articles yet.</p>
+    {% endfor %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

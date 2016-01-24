@@ -60,3 +60,9 @@ a:hover .label-default {
 a:hover {
     text-decoration: none;
 }
+
+.btn-dwong {
+    background-color: #FCEDCF;
+    color: #999;
+    margin-bottom: 5px;
+}

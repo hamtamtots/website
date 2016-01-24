@@ -19,10 +19,12 @@
     </div>
     <h1 class="article-title">{{ article.title }}</h1>
     <p class="article-meta">{{ article.last_modified|date:'j F, Y' }}</p>
-    {% for tag in article.tags.all %}
-        <a href="{% url 'blog_tagged_list' tag=tag.tag %}"><span class="label label-default">{{ tag.tag }}</span></a>
-    {% endfor %}
-    {{ article.body|safe }}
+    <p>
+        {% for tag in article.tags.all %}
+            <a href="{% url 'blog_list' %}#{{ tag.tag|cut:" "}}"><span class="label label-default">{{ tag.tag }}</span></a>
+        {% endfor %}
+    </p>
+    {{ article.body.body|safe }}
     <hr />
     <div id="disqus_thread"></div>
     <script>
@@ -33,7 +35,7 @@
     
         var disqus_config = function () {
             this.page.url = '{{ request.build_absolute_uri }}';
-            this.page.identifier = '{{ request.path }}';
+            this.page.identifier = 'article_{{ article.id }}';
             this.page.title = '{{ article.title }}';
         };
     

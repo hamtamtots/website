@@ -131,6 +131,7 @@ INSTALLED_APPS = (
     'home',
     'link',
     'blog',
+    'debug_toolbar',
 )
 
 # A sample logging configuration. The only tangible logging

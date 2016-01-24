@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+
+{% block title %}Blog - {{ block.super }}{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block precontent %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 text-center">
+                {% for tag in object_list %}
+                    <a href="#{{tag.tag|cut:" "}}" class="btn btn-dwong">{{tag.tag}} <span class="badge">{{tag.articles.all.count}}</span></a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    {% for tag in object_list %}
+        <div id="{{tag.tag|cut:" "}}">
+            <h3>{{ tag.tag }}</h3>
+            <ul>
+                {% for article in tag.articles.all %}
+                    <li>{{ article.created|date:"j M Y" }} - <a href="{% url 'blog_article' key=article.key %}">{{article.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
