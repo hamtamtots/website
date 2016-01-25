@@ -24,7 +24,7 @@
         <div id="{{tag.tag|cut:" "}}">
             <h3>{{ tag.tag }}</h3>
             <ul>
-                {% for article in tag.articles.all %}
+                {% for article in tag.articles.all|dictsort:"created" %}
                     <li>{{ article.created|date:"j M Y" }} - <a href="{% url 'blog_article' key=article.key %}">{{article.title}}</a></li>
                 {% endfor %}
             </ul>

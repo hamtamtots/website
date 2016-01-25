@@ -9,4 +9,4 @@ class TagListView(ListView):
     template_name = 'blog/taglist.html'
 
     def get_queryset(self):
-        return Tag.objects.prefetch_related('articles')
+        return Tag.objects.prefetch_related('articles').order_by('tag')
