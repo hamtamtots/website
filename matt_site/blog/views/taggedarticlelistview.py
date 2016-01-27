@@ -1,13 +1,13 @@
-﻿from django.views.generic import ListView
-
+﻿from blog.views.articlelistview import ArticleListView
 from blog.models.article import Article
 
-class TaggedArticleListView(ListView):
-    
-    template_name = 'blog/articlelist.html'
+class TaggedArticleListView(ArticleListView):
 
     def get_queryset(self):
-        return Article.objects.filter(tags__tag=self.kwargs['tag'])
+        return super().queryset.filter(tags__tag = self.get_tag_arg())
 
     def get_title(self):
-        return 'Tagged \'{0}\''.format(self.kwargs['tag']);
+        return 'Tag \'{0}\''.format(self.get_tag_arg());
+
+    def get_tag_arg(self):
+        return self.kwargs['tag']

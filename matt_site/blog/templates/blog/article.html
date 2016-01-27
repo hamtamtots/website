@@ -20,9 +20,7 @@
     <h1 class="article-title">{{ article.title }}</h1>
     <p class="article-meta">{{ article.last_modified|date:'j F, Y' }}</p>
     <p>
-        {% for tag in article.tags.all %}
-            <a href="{% url 'blog_list' %}#{{ tag.tag|cut:" "}}"><span class="label label-default">{{ tag.tag }}</span></a>
-        {% endfor %}
+        {% include 'blog/stubs/taglinks.html' with tags=article.tags.all %}
     </p>
     {{ article.body.body|safe }}
     <hr />

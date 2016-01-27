@@ -7,6 +7,7 @@ class Article(models.Model):
     id = models.AutoField(primary_key = True)
     key = models.CharField(max_length = 1000)
     title = models.CharField(max_length = 1000)
+    description = models.CharField(max_length = 1000)
     tags = models.ManyToManyField(Tag, related_name='articles')
     created = models.DateTimeField(auto_now_add = True)
     last_modified = models.DateTimeField(auto_now = True)

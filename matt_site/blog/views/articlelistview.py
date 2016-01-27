@@ -6,3 +6,4 @@ class ArticleListView(ListView):
     
     model = Article
     template_name = 'blog/articlelist.html'
+    queryset = Article.objects.order_by('-created')

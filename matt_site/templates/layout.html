@@ -17,7 +17,7 @@
 <body>
     
     <header class="container text-center">
-        <img src="{% static 'content/images/dwongoose256.png' %}" />
+        <a href="{% url 'blog_list' %}"><img src="{% static 'content/images/dwongoose256.png' %}" /></a>
         {% block header %}
         {% endblock %}
     </header>

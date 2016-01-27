@@ -93,6 +93,7 @@
     <Folder Include="blog\templates\admin\" />
     <Folder Include="blog\templates\admin\blog\" />
     <Folder Include="blog\templates\admin\blog\articlebody\" />
+    <Folder Include="blog\templates\blog\stubs\" />
     <Folder Include="blog\tests\" />
     <Folder Include="blog\templates\blog\" />
     <Folder Include="blog\views\" />
@@ -124,6 +125,7 @@
     <Content Include="blog\static\blog\scripts\article.js" />
     <Content Include="blog\static\blog\content\article.css" />
     <Content Include="blog\templates\admin\blog\articlebody\change_form.html" />
+    <Content Include="blog\templates\blog\stubs\taglinks.html" />
     <Content Include="blog\templates\blog\article.html" />
     <Content Include="blog\templates\blog\taglist.html" />
     <Content Include="bower.json">

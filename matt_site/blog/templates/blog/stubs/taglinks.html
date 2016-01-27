@@ -1,0 +1,3 @@
+{% for tag in tags %}
+    <a href="{% url 'blog_tag_list' %}#{{ tag.tag|cut:" "}}"><span class="label label-default">{{ tag.tag }}</span></a>
+{% endfor %}
