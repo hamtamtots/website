@@ -22,7 +22,7 @@
     <p>
         {% include 'blog/stubs/taglinks.html' with tags=article.tags.all %}
     </p>
-    {{ article.body.body|safe }}
+    {% include article.body_template %}
     <hr />
     <div id="disqus_thread"></div>
     <script>
