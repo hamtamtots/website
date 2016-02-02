@@ -11,6 +11,7 @@
 {% endblock %}
 
 {% block content %}
+{% if article.active or user.is_authenticated %}
     <div id="sharebar">
         <a href="https://twitter.com/share?text={{ article.title }}&url={{ request.build_absolute_uri|urlencode }}" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
         <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a>
@@ -47,6 +48,9 @@
         })();
     </script>
     <noscript>Please enable JavaScript to view comments</noscript>
+{% else %}
+    <p>Article under construction</p>
+{% endif %}
 {% endblock %}
 
 {% block scripts %}

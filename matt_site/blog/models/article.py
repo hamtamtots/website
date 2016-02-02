@@ -11,6 +11,7 @@ class Article(models.Model):
     tags = models.ManyToManyField(Tag, related_name='articles')
     created = models.DateTimeField(auto_now_add = True)
     last_modified = models.DateTimeField(auto_now = True)
+    active = models.BooleanField()
     body = models.OneToOneField(ArticleBody)
 
     def __str__(self):
